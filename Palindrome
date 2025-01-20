@@ -1,0 +1,30 @@
+package com.dhaya;
+import java.util.*;
+public class palindrome {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter a Value : ");
+		String a = sc.nextLine();
+		if(isPalindrome(a)) {
+			System.out.println("The value is Palindrome...");
+		}else {
+			System.out.println("The value is Not Palindrome...");
+		}
+		sc.close();
+	}
+	public static boolean isPalindrome(String a) {
+		a=a.toLowerCase();
+		int left=0,right=a.length()-1;
+		while(left<right) {
+			if(a.charAt(left)!=a.charAt(right)) {
+				return false;
+			}
+			left++;
+			right--;
+		}
+		return true;
+	}
+
+}
